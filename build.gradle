@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '1.2.2'
+}
+
+repositories {
+    flatDir {
+        dirs 'lib'
+    }
+    jcenter()
+}
+
+dependencies {
+    compile name: 'comm'
+}
+
+jar {
+    manifest {
+        attributes('Main-Class': 'com.tastyminerals.sesam.sources.ElevatorRunner')
+    }
+}
